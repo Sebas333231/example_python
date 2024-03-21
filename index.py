@@ -1,8 +1,10 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer # Representa un servidor HTTP que puede escuchar conexiones en un determinado puerto.
+from http.server import BaseHTTPRequestHandler, HTTPServer 
+#HTTPServer Representa un servidor HTTP que puede escuchar conexiones en un determinado puerto.
+# BaseHTTPRequestHandler Se utiliza para manejar las solicitudes HTTP que llegan al servidor.
 #Importo las librerias necesarias para el procedimiento
 
 #Creo una clase principal y le paso un parametro
-class Principal(BaseHTTPRequestHandler): # BaseHTTPRequestHandler Se utiliza para manejar las solicitudes HTTP que llegan al servidor.
+class Principal(BaseHTTPRequestHandler): 
     #Creo una función
     def do_GET(self):
         #Responde codigo 200
@@ -30,7 +32,7 @@ def run_server():
     #Creo una instancia del servidor HTTP con la clase HTTPServer
     httpd = HTTPServer(server_address, Principal)
     #Imprime un mensaje
-    print('Servidor iniciado en http://localhost:2020/')
+    print('Servidor iniciado :)')
     #Mantiene el servidor en ejecucion indefinido
     httpd.serve_forever()
 
